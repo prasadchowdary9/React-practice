@@ -1,0 +1,58 @@
+React components have 4 life cycle methods in it during the period.
+those are Mounting and Updating and Unmounting and Error Handling.
+
+Mounting - it is called when an instance of a component being created and inserted into the dom.
+Updating - When a component is re rendered as a result of changes in its props or state
+Unmounting - When a component is being removed from the DOM
+Error Handling - When there is an error during rendering in a life cycle method or in a constructor of child component.
+
+For Each life cycles some Methods are there.
+For Mounting Phase:
+  four methods are there:
+  1. Constructor-A special function that will called when a new component is created and it will initialize state and binding event hand
+  2. static getDerivedStateFromProps- when the state of component depends on changes in props over the timeand set state
+  3. render
+  4. componentDidMount
+
+For Updating phase:
+  five methods are there:
+  1. static getDerivedStateFromProps- this Method is called every time when the component is re rendered. and set the state
+  2. shouldComponentUpdate- this dictates that the component should update or not. it will check existing state amd props with current  value and then return true or false. mainly used for performance optimization
+
+  3. render-
+  4. getSnapshotBeforeUpdate- called right before the changes from the virtual dom are to be  reflected into the DOM. and captures some information from the DOM. This method will retur either null or a value. The returned value will be passed to the third parameter into the next method.
+  5. componentDidUpdate- called after the render is finished  in the re render cycles. it will call once
+For Unmounting  phase:
+  one method is there:
+1.willComponentUnMount- this method is invoked immediately before a component is unmounted or destroyeds. ex - cancelling any network connections and removing even handlers etc
+
+For Error Handling Phase:
+ two methods are there:
+ 1. static getDerivedStateFromError
+ 2. componentDidCatch
+
+A class component that can implement either both or any one method to becomes error boundary
+static getDerivedStateFromError method id used to get fallback UI
+componentDidCAtch method is used to log th error information
+
+
+
+Difference between Regular Component and Pure Component 
+
+
+
+A regular component does not implement the should component update method by default it returns the true
+But The Pure component method on other hand implements should componentupdatemethod with a shllow props and state comparsion.
+
+For class components pure components are there but for the same cause ReactMemo comes into picture for Functional compoenents.***
+
+
+HIGHER ORDER COMPONENT:
+
+It is a pattern where a function takes a component as an argument and returns a new component
+
+const newComponent = higherOrderComponent(originalComponent)
+
+
+
+

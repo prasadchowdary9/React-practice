@@ -34,6 +34,7 @@ class ComponentB extends Component {
     return (
       <React.Fragment>
         <h1>Component B</h1>
+          <h2>compound c</h2>
         
       </React.Fragment>
     )

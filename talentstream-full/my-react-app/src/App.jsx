@@ -1,19 +1,18 @@
-import React from 'react'
-import Form from "./components/Form"
-import ComponentA from './components/ComponentA'
-import MyPureComponent from './components/MyPureComponent'
-import ParentComp from './components/ParentComp'
-import ReactRefDemo from './components/ReactRefDemo'
-import './App.css'
+import React from 'react';
+import CounterOne from './components/CounterOne';
+import './App.css';
+import CounterTwo from './components/CounterTwo';
+import DataFetching from './components/DataFetching';
+import DataFetchingusingReducer from './components/DataFetchingusingReducer';
+
 const App = () => {
   return (
     <div className='App'>
-     <ReactRefDemo />
-      
-      
-      
+      <h1>React Reducer Counter</h1>
+      <DataFetching />
+      <DataFetchingusingReducer />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
